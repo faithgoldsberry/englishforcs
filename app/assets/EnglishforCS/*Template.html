@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>English for Computer Science</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    h1, h2 {
+      color: #333;
+    }
+    .hover-term {
+      color: #007BFF;
+      text-decoration: underline;
+      cursor: pointer;
+      position: relative;
+    }
+    .hover-term:hover::after {
+      content: attr(title);
+      position: absolute;
+      background: #f0f0f0;
+      color: #333;
+      border: 1px solid #ccc;
+      padding: 5px;
+      border-radius: 5px;
+      top: 25px;
+      left: 0;
+      white-space: nowrap;
+      z-index: 10;
+    }
+    .translation {
+      color: #555;
+      font-style: italic;
+      display: none;
+    }
+    .task, .questions {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      background: #f9f9f9;
+      border-radius: 5px;
+    }
+    .button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Loops in Python</h1>
+    <p>
+      In Python, a <span class="hover-term" title="A block of code that runs repeatedly based on a condition.">loop</span> allows you to execute a block of code multiple times. Common types of loops include 
+      <span class="hover-term" title="A loop that runs while a specific condition is true.">while loops</span> and 
+      <span class="hover-term" title="A loop that iterates over items of a sequence (e.g., a list).">for loops</span>.
+    </p>
+    <button class="button" onclick="toggleTranslation()">Show Spanish Translation</button>
+    <p class="translation">
+      En Python, un bucle te permite ejecutar un bloque de código múltiples veces. Los tipos comunes de bucles incluyen 
+      bucles <em>while</em> y bucles <em>for</em>.
+    </p>
+
+    <div class="questions">
+      <h2>Comprehension Questions</h2>
+      <ol>
+        <li>Why do you think loops are important in programming?</li>
+        <li>What’s the difference between a <em>while loop</em> and a <em>for loop</em>?</li>
+      </ol>
+    </div>
+
+    <div class="task">
+      <h2>Writing Task / Code Presentation</h2>
+      <p>Write a loop in Python that prints all the numbers from 1 to 10. Share your code and explain your approach.</p>
+    </div>
+
+    <div class="questions">
+      <h2>Follow-Up Questions</h2>
+      <p>Do you have any questions about loops? What other programming topics would you like to explore?</p>
+    </div>
+  </div>
+
+  <script>
+    function toggleTranslation() {
+      const translation = document.querySelector('.translation');
+      translation.style.display = translation.style.display === 'none' || translation.style.display === '' ? 'block' : 'none';
+    }
+  </script>
+</body>
+</html>
